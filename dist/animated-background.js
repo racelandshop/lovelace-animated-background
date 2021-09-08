@@ -65,11 +65,19 @@ function getVars() {
   Root = Root && Root.shadowRoot;
   Root = Root && Root.querySelector("hui-root");
   Hui = Root;
+  var Hass = Root.hass;
   if (Root) {
     Lovelace = Root.lovelace;
     if (Lovelace) {
       Animated_Config = Lovelace.config.animated_background;
     }
+    var theme = Hass.selectedTheme["theme"];
+    var theme_url = Hass.themes.themes[theme]["background-video"];
+    
+    if (!Animated_Config && typeof theme_url === 'undefined'){
+      Animated_Config = {"default_url": theme};
+    }
+
     View_Layout = Root.shadowRoot.getElementById("layout");
     View = Root.shadowRoot.getElementById("view");
   }
@@ -374,10 +382,6 @@ function renderBackgroundHTML() {
         Previous_State = current_state;
         Previous_Url = null;
         var url = current_config.default_url;
-        Root = document.querySelector("home-assistant");
-        var Hass = Root.hass;
-        var theme = Hass.selectedTheme["theme"];
-        var url = Hass.themes.themes[theme]["background-video"];
         if (url) {
           if (Array.isArray(url)) {
             state_url = url[randomIntFromInterval(0, url.length - 1)];
@@ -396,10 +400,10 @@ function renderBackgroundHTML() {
     }
     else {
       var url = current_config.default_url;
-      Root = document.querySelector("home-assistant");
-      var Hass = Root.hass;
-      var theme = Hass.selectedTheme["theme"];
-      var url = Hass.themes.themes[theme]["background-video"];
+      // Root = document.querySelector("home-assistant");
+      // var Hass = Root.hass;
+      // var theme = Hass.selectedTheme["theme"];
+      // var url = Hass.themes.themes[theme]["background-video"];
       if (url) {
         if (Array.isArray(url)) {
           state_url = url[randomIntFromInterval(0, url.length - 1)];

@@ -374,6 +374,11 @@ function renderBackgroundHTML() {
         Previous_State = current_state;
         Previous_Url = null;
         var url = current_config.default_url;
+        Root = document.querySelector("home-assistant");
+        var Hass = Root.hass;
+        var theme = Hass.selectedTheme["theme"];
+        var url = Hass.themes.themes[theme]["background-video"];
+        console.log("This is a teste 1", url);
         if (url) {
           if (Array.isArray(url)) {
             state_url = url[randomIntFromInterval(0, url.length - 1)];
@@ -392,6 +397,11 @@ function renderBackgroundHTML() {
     }
     else {
       var url = current_config.default_url;
+      Root = document.querySelector("home-assistant");
+      var Hass = Root.hass;
+      var theme = Hass.selectedTheme["theme"];
+      var url = Hass.themes.themes[theme]["background-video"];
+      console.log("This is a teste 2", url);
       if (url) {
         if (Array.isArray(url)) {
           state_url = url[randomIntFromInterval(0, url.length - 1)];

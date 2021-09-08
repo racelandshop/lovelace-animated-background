@@ -378,7 +378,6 @@ function renderBackgroundHTML() {
         var Hass = Root.hass;
         var theme = Hass.selectedTheme["theme"];
         var url = Hass.themes.themes[theme]["background-video"];
-        console.log("This is a teste 1", url);
         if (url) {
           if (Array.isArray(url)) {
             state_url = url[randomIntFromInterval(0, url.length - 1)];
@@ -401,7 +400,6 @@ function renderBackgroundHTML() {
       var Hass = Root.hass;
       var theme = Hass.selectedTheme["theme"];
       var url = Hass.themes.themes[theme]["background-video"];
-      console.log("This is a teste 2", url);
       if (url) {
         if (Array.isArray(url)) {
           state_url = url[randomIntFromInterval(0, url.length - 1)];

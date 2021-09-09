@@ -74,8 +74,8 @@ function getVars() {
     var theme = Hass.selectedTheme["theme"];
     var theme_url = Hass.themes.themes[theme]["background-video"];
     
-    if (!Animated_Config && typeof theme_url === 'undefined'){
-      Animated_Config = {"default_url": theme};
+    if (!Animated_Config && typeof theme_url !== 'undefined'){
+      Animated_Config = {"default_url": theme_url};
     }
 
     View_Layout = Root.shadowRoot.getElementById("layout");

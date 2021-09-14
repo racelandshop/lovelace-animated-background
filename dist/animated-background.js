@@ -73,7 +73,7 @@ function getVars() {
     }
     var theme = Hass.selectedTheme["theme"];
     var theme_url = Hass.themes.themes[theme]["background-video"];
-    
+
     if (!Animated_Config && typeof theme_url !== 'undefined'){
       Animated_Config = {"default_url": theme_url};
     }
@@ -460,7 +460,7 @@ function renderBackgroundHTML() {
           margin: 0;
           position: relative;
         }
-    
+
         video {
           min-width: 100%;
           min-height: 100%;
@@ -483,7 +483,7 @@ function renderBackgroundHTML() {
           transform: translate(-50%, -50%);
         }
       </style>
-    </head>  
+    </head>
     <body id='source-body'>
     ${doc_body}
     </body>
@@ -495,15 +495,15 @@ function renderBackgroundHTML() {
       var style = document.createElement("style");
       style.innerHTML = `
       .bg-video{
-          min-width: 100vw; 
+          min-width: 100vw;
           min-height: 100vh;
-          
+
       }
       .bg-wrap{
           position: fixed;
           right: 0;
           top: 0;
-          min-width: 100vw; 
+          min-width: 100vw;
           min-height: 100vh;
           z-index: -10;
       }`;
@@ -511,7 +511,7 @@ function renderBackgroundHTML() {
       div.id = "background-video";
       div.className = "bg-wrap"
       div.innerHTML = `
-     <iframe id="background-iframe" class="bg-video" frameborder="0" srcdoc="${source_doc}"/> 
+     <iframe id="background-iframe" class="bg-video" frameborder="0" srcdoc="${source_doc}"/>
     `;
       Root.shadowRoot.appendChild(style);
       Root.shadowRoot.appendChild(div)

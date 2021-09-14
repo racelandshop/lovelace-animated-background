@@ -79,7 +79,6 @@ function getVars() {
     var theme_url = Hass.themes.themes[theme]["background-video"];
     }
     catch{}
-    console.log("testenfhwdhdhuwd");
 
     if (!Animated_Config && typeof theme_url !== 'undefined'){
       Animated_Config = {"default_url": theme_url};

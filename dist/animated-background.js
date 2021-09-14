@@ -65,7 +65,10 @@ function getVars() {
   Root = Root && Root.shadowRoot;
   Root = Root && Root.querySelector("hui-root");
   Hui = Root;
-  var Hass = Root.hass;
+  try {
+    var Hass = Root.hass;
+  }
+  catch { }
   if (Root) {
     Lovelace = Root.lovelace;
     if (Lovelace) {

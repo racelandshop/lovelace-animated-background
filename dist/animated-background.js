@@ -71,8 +71,11 @@ function getVars() {
     if (Lovelace) {
       Animated_Config = Lovelace.config.animated_background;
     }
+    try{
     var theme = Hass.selectedTheme["theme"];
     var theme_url = Hass.themes.themes[theme]["background-video"];
+    }
+    catch{}
 
     if (!Animated_Config && typeof theme_url !== 'undefined'){
       Animated_Config = {"default_url": theme_url};

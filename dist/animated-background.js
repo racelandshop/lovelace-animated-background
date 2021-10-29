@@ -84,7 +84,7 @@ function getVars() {
     console.log("Panel 2", panel_selected);
    
     }
-    catch{console.log("deu erros no try", theme_url);}
+    catch{console.log("deu erros no try", theme);}
     
     if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected !== 'undefined'){
       Animated_Config = {"default_url": theme_url, panel_selected}; //adicionado panel_selected

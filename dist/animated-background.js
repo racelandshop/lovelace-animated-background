@@ -74,12 +74,13 @@ function getVars() {
     if (Lovelace) {
       Animated_Config = Lovelace.config.animated_background;
     }
+    console.log("Chamar HomeKit");
     try{
     var theme = Hass.selectedTheme["theme"];
     var theme_url = Hass.themes.themes[theme]["background-video"];
     var panel_selected = /homekit/; // a variavel declarada vai associar-se a todos os temas que estejam associados ao homekit
     var panel_selecte = Hass.panels.panels[theme]['/homekit/'];
-    console.log("Chamar HomeKit", homekit);
+    
     //var panel_selected = Hass.panels.panels[theme][homekit]
     }
     catch{}

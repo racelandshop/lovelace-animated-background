@@ -85,13 +85,14 @@ function getVars() {
     
     //var panel_selected = Hass.panels.panels[theme][homekit]
     }
-    catch{}
+    catch{console.log("deu erros no try");}
   
 
     //if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected !== 'undefined' && typeof panel_selected !== 'undefined'){ //adicionado apartir do 1º 'undefined'
     if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected !== 'undefined'){
       //Animated_Config = {"default_url": theme_url, panel_selected, panel_selecte}; //adicionado panel_selected
       Animated_Config = {"default_url": theme_url, panel_selected}; //adicionado panel_selected
+      console.log("entrei aqui");
     }
 
     View_Layout = Root.shadowRoot.getElementById("layout");

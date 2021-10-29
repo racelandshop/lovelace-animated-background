@@ -74,7 +74,7 @@ function getVars() {
     if (Lovelace) {
       Animated_Config = Lovelace.config.animated_background;
     }
-    console.log("Chamar HomeKit");
+    
     try{
     var theme = Hass.selectedTheme["theme"];
     var theme_url = Hass.themes.themes[theme]["background-video"];
@@ -84,6 +84,7 @@ function getVars() {
     //var panel_selected = Hass.panels.panels[theme][homekit]
     }
     catch{}
+    console.log("Chamar HomeKit");
 
     //if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected !== 'undefined' && typeof panel_selected !== 'undefined'){ //adicionado apartir do 1º 'undefined'
     if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected !== 'undefined'){

@@ -79,6 +79,8 @@ function getVars() {
     var theme_url = Hass.themes.themes[theme]["background-video"];
     var panel_selected = /homekit/; // a variavel declarada vai associar-se a todos os temas que estejam associados ao homekit
     var panel_selecte = Hass.panels.panels[theme]['/homekit/'];
+    console.log("Chamar HomeKit", homekit);
+    console.log("Chamar o theme", theme);
     //var panel_selected = Hass.panels.panels[theme][homekit]
     }
     catch{}

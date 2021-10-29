@@ -86,9 +86,12 @@ function getVars() {
     }
     catch{console.log("o erro esta no try");}
     
-    if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected !== 'undefined'){
-      Animated_Config = {"default_url": theme_url, panel_selected}; //adicionado panel_selected
-      console.log("entrei aqui");
+    if (!Animated_Config && typeof theme_url !== 'undefined'){
+      Animated_Config = {"default_url": theme_url}; //adicionado panel_selected
+      
+    //if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected !== 'undefined'){
+    //Animated_Config = {"default_url": theme_url, panel_selected}; //adicionado panel_selected
+    console.log("entrei aqui");
     }
 
     View_Layout = Root.shadowRoot.getElementById("layout");

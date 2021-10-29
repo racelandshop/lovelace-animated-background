@@ -79,15 +79,15 @@ function getVars() {
     var theme = Hass.selectedTheme["theme"];
     var theme_url = Hass.themes.themes[theme]["background-video"];
     var panel_selected = /homekit/; // a variavel declarada vai associar-se a todos os temas que estejam associados ao homekit
-    //var panel_selecte = Hass.panels.panels[theme]['/homekit/'];
+    var panel_selecte = Hass.panels.panels[theme]['/homekit/'];
     
     //var panel_selected = Hass.panels.panels[theme][homekit]
     }
     catch{}
-    console.log("Chamar HomeKit", /homekit/);
+    console.log("Chamar HomeKit", homekit);
 
     //if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected !== 'undefined' && typeof panel_selected !== 'undefined'){ //adicionado apartir do 1º 'undefined'
-    if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected !== 'undefined'){
+    if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected ?== 'undefined'){
       //Animated_Config = {"default_url": theme_url, panel_selected, panel_selecte}; //adicionado panel_selected
       Animated_Config = {"default_url": theme_url, panel_selected}; //adicionado panel_selected
     }

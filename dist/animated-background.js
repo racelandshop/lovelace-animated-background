@@ -76,12 +76,15 @@ function getVars() {
     }
     
     try{
+    const reexpression = /homekit/;
     var theme = Hass.selectedTheme["theme"];
     var theme_url = Hass.themes.themes[theme]["background-video"];
     var panel_selected = Hass.panelUrl;
+    var re = new RegExp("ab+c");
+    var panel_selected_filter =  reexpression.exec(panel_selected);
     //var panel_selected = /homekit/;
       
-    //console.log("Panel 2", panel_selected);
+    console.log("FILTER", panel_selected_filter);
    
     }
     catch{console.log("o erro esta no try");}

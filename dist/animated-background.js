@@ -84,7 +84,7 @@ function getVars() {
     //var panel_selected = Hass.panels.panels[theme][homekit]
     }
     catch{}
-    console.log("Chamar HomeKit");
+    console.log("Chamar HomeKit", homekit);
 
     //if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected !== 'undefined' && typeof panel_selected !== 'undefined'){ //adicionado apartir do 1º 'undefined'
     if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected !== 'undefined'){

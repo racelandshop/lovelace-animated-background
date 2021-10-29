@@ -65,7 +65,7 @@ function getVars() {
   Root = Root && Root.shadowRoot;
   Root = Root && Root.querySelector("hui-root");
   Hui = Root;
-  try {
+    try {
     var Hass = Root.hass;
   }
   catch { }
@@ -75,26 +75,25 @@ function getVars() {
       Animated_Config = Lovelace.config.animated_background;
     }
     
+
+    const reexpression = /homekit/;
     try{
-    const reexpression = 'homekit';
     var theme = Hass.selectedTheme["theme"];
     var theme_url = Hass.themes.themes[theme]["background-video"];
+    }   
+    catch{console.log("o erro esta no try");}
+    
     var panel_selected = Hass.panelUrl;
     var panel_selected_filter =  reexpression.exec(panel_selected);
     //var panel_selected = /homekit/;
-      
-    console.log("FILTER", panel_selected_filter);
-   
-    }
-    catch{console.log("o erro esta no try");}
-    
+
     //if (!Animated_Config && typeof theme_url !== 'undefined'){
       //Animated_Config = {"default_url": theme_url}; //adicionado panel_selected
       
-    if (!Animated_Config && typeof theme_url !== 'undefined' && panel_selected !== 'homekit'){
+    if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected_filter === undefined){
       console.log("teste animated", typeof panel_selected !== 'undefined');
       Animated_Config = {"default_url": theme_url};
-    console.log("entrei aqui", typeof panel_selected !== 'undefined');
+
     }
 
     View_Layout = Root.shadowRoot.getElementById("layout");

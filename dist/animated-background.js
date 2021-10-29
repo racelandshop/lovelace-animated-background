@@ -89,10 +89,10 @@ function getVars() {
     //if (!Animated_Config && typeof theme_url !== 'undefined'){
       //Animated_Config = {"default_url": theme_url}; //adicionado panel_selected
       
-    if (!Animated_Config && typeof theme_url === undefined && typeof panel_selected === undefined){
-      console.log("teste animated", typeof panel_selected === 'undefined');
+    if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected !== 'undefined'){
+      console.log("teste animated", typeof panel_selected !== 'undefined');
       Animated_Config = {"default_url": theme_url};
-    console.log("entrei aqui", typeof panel_selected === 'undefined');
+    console.log("entrei aqui", typeof panel_selected !== 'undefined');
     }
 
     View_Layout = Root.shadowRoot.getElementById("layout");

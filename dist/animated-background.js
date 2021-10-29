@@ -90,7 +90,7 @@ function getVars() {
     //if (!Animated_Config && typeof theme_url !== 'undefined'){
       //Animated_Config = {"default_url": theme_url}; //adicionado panel_selected
       
-    if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected_filter === undefined){
+    if (!Animated_Config && typeof theme_url !== 'undefined' &&  panel_selected_filter == null){
       console.log("teste animated", typeof panel_selected !== 'undefined');
       Animated_Config = {"default_url": theme_url};
 

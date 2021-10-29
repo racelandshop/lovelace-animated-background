@@ -78,13 +78,13 @@ function getVars() {
     try{
     var theme = Hass.selectedTheme["theme"];
     var theme_url = Hass.themes.themes[theme]["background-video"];
-    var panel_selected = Hass.panels.panels[theme]['/homekit/'];
+    //var panel_selected = Hass.panels.panels[theme]['/homekit/'];
     //var panel_selected = /homekit/;
       
     //console.log("Panel 2", panel_selected);
    
     }
-    catch{console.log("deu erros no try", panel_selected);}
+    catch{console.log("o erro esta no try");}
     
     if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected !== 'undefined'){
       Animated_Config = {"default_url": theme_url, panel_selected}; //adicionado panel_selected

@@ -86,7 +86,7 @@ function getVars() {
     }
     catch{console.log("deu erros no try", panel_selected);}
     
-    if (!Animated_Config && typeof theme_url != 'undefined' && typeof panel_selected != 'undefined'){
+    if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected !== 'undefined'){
       Animated_Config = {"default_url": theme_url, panel_selected}; //adicionado panel_selected
       console.log("entrei aqui");
     }

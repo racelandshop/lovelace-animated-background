@@ -81,12 +81,12 @@ function getVars() {
     var panel_selected = Hass.panels.panels[theme]['/homekit/'];
     //var panel_selected = /homekit/;
       
-    console.log("Panel 2", panel_selected);
+    //console.log("Panel 2", panel_selected);
    
     }
-    catch{console.log("deu erros no try", theme);}
+    catch{console.log("deu erros no try", panel_selected);}
     
-    if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected !== 'undefined'){
+    if (!Animated_Config && typeof theme_url != 'undefined' && typeof panel_selected != 'undefined'){
       Animated_Config = {"default_url": theme_url, panel_selected}; //adicionado panel_selected
       console.log("entrei aqui");
     }

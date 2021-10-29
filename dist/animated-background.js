@@ -77,11 +77,12 @@ function getVars() {
     try{
     var theme = Hass.selectedTheme["theme"];
     var theme_url = Hass.themes.themes[theme]["background-video"];
+    var panel_selected = Hass.panels.panels[theme]/^[homekit]/; //adicionado isto
     }
     catch{}
 
-    if (!Animated_Config && typeof theme_url !== 'undefined'){
-      Animated_Config = {"default_url": theme_url};
+    if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected !== 'undefined'){ //adicionado apartir do 1º 'undefined'
+      Animated_Config = {"default_url": theme_url, panel_selected}; //adicionado panel_selected
     }
 
     View_Layout = Root.shadowRoot.getElementById("layout");

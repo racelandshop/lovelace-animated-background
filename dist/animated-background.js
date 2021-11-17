@@ -86,8 +86,7 @@ function getVars() {
     var panel_selected = Hass.panelUrl;
     var panel_selected_filter =  reexpression.exec(panel_selected);
     
-    // if (!Animated_Config && typeof theme_url !== 'undefined' && typeof panel_selected_filter === undefined){
-    if (!Animated_Config && typeof theme_url !== 'undefined'){
+    if (!Animated_Config && typeof theme_url !== 'undefined' &&  panel_selected_filter === null){
       Animated_Config = {"default_url": theme_url};
     }
 
